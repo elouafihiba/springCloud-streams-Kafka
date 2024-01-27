@@ -1,0 +1,19 @@
+#Start zookeeper
+$ start bin\windows\zookeeper-server-start.bat config\zookeeper.properties
+
+#Start kafka
+$ start bin\windows\kafka-server-start.bat config\server.properties
+
+#Création d’un Topic R1
+$ start bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R1
+
+
+#S’abonner au topic R1 pour consommer les messages
+$ bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R1
+
+#Produire des messages vers le topic
+$ bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic R1
+
+
+$ start bin\window\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic R4 --property print.key=true --property print.value=true --property key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
+--property value.deserializer=org.apache.kafka.common.serialization.LongDeserializer
