@@ -1,5 +1,5 @@
 # Objectif :
-En Utilisant KAFKA et Stpring Cloud Streams, Créer :
+En Utilisant KAFKA et Stpring Cloud Streams, on fait la création :
 - Un Service Producer KAFKA via un Rest Controler
 - Un Service Consumer KAFKA
 - Un Service Supplier KAFKA
